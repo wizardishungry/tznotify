@@ -1,4 +1,5 @@
-// build unix
+//go:build unix
+
 package tznotify
 
 import (
