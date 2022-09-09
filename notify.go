@@ -12,7 +12,7 @@ import (
 	"github.com/rjeczalik/notify"
 )
 
-const PathSeparator = string(os.PathSeparator)
+const pathSeparator = string(os.PathSeparator)
 const globalLocalTime = "/etc/localtime"
 
 // Watcher is a persistent subscription to timezone updates.
@@ -106,7 +106,7 @@ func ParseSymlink(path string) (*time.Location, error) {
 	if err != nil {
 		return nil, err
 	}
-	l := strings.Split(link, PathSeparator)
+	l := strings.Split(link, pathSeparator)
 	if len(l) < 2 {
 		return nil, fmt.Errorf("bad link: %s", link)
 	}
